@@ -1,0 +1,26 @@
+.home {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.home__components {
+}
+.home-left, .home-right {
+  position: absolute;
+  width: 60%;
+  height: 130%;
+  transform: translate(-50%, -50%);
+}
+.home-left {
+  background-color: red;
+  top: 0%;
+  left: -4%;
+  transform: rotate(-25deg);
+}
+.home-right {
+  background-color: blue;
+  top: -30%;
+  left: 54.5%;
+  transform: rotate(-25deg);
+}

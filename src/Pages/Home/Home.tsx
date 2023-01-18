@@ -2,7 +2,10 @@ import React from 'react'
 import './Home.scss'
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className="home">
+        <div className="home-left"></div>
+        <div className="home-right"></div>
+    </div>
   )
 }
 
