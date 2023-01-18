@@ -1,0 +1,74 @@
+.thunder {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  z-index: 2;
+}
+.icon__thunder {
+  margin-left: -2.4rem;
+  width: 4.8rem;
+  height: 8.6rem;
+  filter: drop-shadow(-1px -2px 0px #cfb8e5) drop-shadow(2px 2px 0px #9a4ee7) drop-shadow(-3px -2px 1px #3c3762)
+    drop-shadow(2px 1px 3px #3c3762);
+  animation: thunder 3s infinite, floating 3s infinite, scale 3s linear infinite;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #645d95;
+    height: 5rem;
+    width: 3rem;
+    border-radius: 0.4rem;
+    box-shadow: inset -0.2rem -0.4rem 0.2rem #3c3762, inset -0.1rem -0.1rem 0.4rem #fff;
+    clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+  }
+  &:after {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    clip-path: polygon(0% 100%, 100% 0%, 45% 0%, 0% 26%);
+    box-shadow: inset 0.2rem 0.3rem 0.2rem #3c3762, inset 0.1rem 0.2rem 0.4rem #fff;
+  }
+}
+@keyframes thunder {
+  0%,
+  25%,
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    filter: drop-shadow(0px -1px 0px #cfb8e5) drop-shadow(0px 0px 0px #9a4ee7)
+      drop-shadow(0px 0px 0px rgba(#9a4ee7, 30%)) drop-shadow(-2px -2px 1px #3c3762) drop-shadow(4px 1px 1px #3c3762);
+    transform: scale(1.2);
+  }
+  50% {
+    filter: drop-shadow(0px -1px 0px #cfb8e5) drop-shadow(0px 0px 3px #9a4ee7)
+      drop-shadow(0px 0px 30px rgba(#9a4ee7, 30%)) drop-shadow(-2px -2px 1px #3c3762) drop-shadow(4px 1px 1px #3c3762);
+    transform: scale(1);
+  }
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(20rem);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+  0% {
+    transform: scale(0.8);
+  }
+}

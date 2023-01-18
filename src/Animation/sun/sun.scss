@@ -1,0 +1,19 @@
+.icon__sun {
+  position: absolute;
+  top: 4rem;
+  right: 10rem;
+  animation: scale 3s linear infinite alternate-reverse;
+  .sun {
+    position: absolute;
+    top: 4.2rem;
+    right: 4.3rem;
+    height: 10rem;
+    width: 10rem;
+    background: linear-gradient(45deg, #f09559 40%, #f0ca43);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 40px rgba(#ffff00, 1)) drop-shadow(0 0 20px rgba(#ffffff, 0.8));
+  }
+  .lights {
+    animation: rotation 6s linear infinite;
+  }
+}

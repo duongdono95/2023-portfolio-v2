@@ -1,0 +1,35 @@
+.icon__rain {
+  z-index: 2;
+  position: absolute;
+  top: 55%;
+  left: 0;
+  width: 200%;
+  height: 11rem;
+  overflow: hidden;
+  &-drops {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    height: 1rem;
+    width: 1rem;
+    background-color: #ffffff;
+    animation: snow 3s linear infinite;
+    // animation-delay: 3s;
+    transform: translateY(-12rem) rotate(45deg);
+    opacity: 1;
+    color: #d2deff;
+    box-shadow: 1rem 2rem, 1rem 7rem, 4rem 8rem, -5rem 8rem, -2rem 4rem, 0rem 11rem, 4rem 5rem, -2rem 8rem,
+      4rem 3rem 0 -0.1rem, 0rem 5rem 0 -0.1rem, -4rem 5rem 0 -0.1rem, -2rem 10rem 0 -0.1rem, -1rem 3rem 0 -0.2rem,
+      2rem 5rem 0 -0.2rem, -2rem 11rem 0 -0.2rem, 2rem 9rem 0 -0.2rem, -4rem 3rem 0 -0.2rem;
+    border-radius: 0 1rem 1rem;
+  }
+}
+@keyframes snow {
+  0% {
+    transform: translateY(-12rem);
+  }
+  50%,
+  100% {
+    transform: translateY(30rem);
+  }
+}

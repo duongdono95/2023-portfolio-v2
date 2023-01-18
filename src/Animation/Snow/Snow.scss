@@ -1,0 +1,33 @@
+.icon__snow {
+  z-index: 2;
+  position: absolute;
+  top: 55%;
+  left: 20%;
+  width: 100%;
+  height: 11rem;
+  overflow: hidden;
+  &-flakes {
+    position: absolute;
+    top: 0;
+    left: 13rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    background: rgb(175, 239, 255);
+    animation: snow 3s linear infinite;
+    transform: translateY(-12rem) rotate(45deg);
+    opacity: 0.5;
+    color: rgb(175, 239, 255);
+    box-shadow: 1rem 2rem, 1rem 7rem, 4rem 8rem, -5rem 8rem, -2rem 4rem, 0rem 11rem, 4rem 5rem, -2rem 8rem,
+      4rem 3rem 0 -0.1rem, 0rem 5rem 0 -0.1rem, -4rem 5rem 0 -0.1rem, -2rem 10rem 0 -0.1rem, -1rem 3rem 0 -0.2rem,
+      2rem 5rem 0 -0.2rem, -2rem 11rem 0 -0.2rem, 2rem 9rem 0 -0.2rem, -4rem 3rem 0 -0.2rem;
+  }
+}
+@keyframes snow {
+  0% {
+    transform: translateY(-12rem) rotate(45deg);
+  }
+  50%,
+  100% {
+    transform: translateY(12rem) rotate(45deg);
+  }
+}
