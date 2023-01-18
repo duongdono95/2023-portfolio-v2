@@ -5,22 +5,23 @@
   position: relative;
 }
 .home__components {
-}
-.home-left, .home-right {
   position: absolute;
-  width: 60%;
-  height: 130%;
-  transform: translate(-50%, -50%);
+  transform: rotate(-25deg),  translate(0%, 0%);
+  transform: translate(0%, 0%);
+  top: -10%;
+  left: -10%;
+  width: 200rem;
+  height: 120%;
+  display: flex;
+  .left {
+  background-color: red
+  }
+  .right {
+    background-color: blue
+  }
 }
-.home-left {
-  background-color: red;
-  top: 0%;
-  left: -4%;
-  transform: rotate(-25deg);
+.home__component {
+  flex-grow: 1;
+  height: 100%;
 }
-.home-right {
-  background-color: blue;
-  top: -30%;
-  left: 54.5%;
-  transform: rotate(-25deg);
-}
+
