@@ -1,7 +1,7 @@
-.menu {
+#menu {
   position: fixed;
   height: 100%;
-  right: 0;
+  right: 0px;
   top: 0;
   padding: 1.5rem;
   display: flex;
@@ -31,10 +31,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--secondary);
-    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--background);
+    background-color: rgba(255, 255, 255, 1);
     border-radius: 50rem;
-    opacity: 0.7;
+    opacity: 0.5;
 
   }
   i:hover {
@@ -45,7 +45,7 @@
       opacity: 1;
       transition: 1s ease-in-out;
       box-shadow: 0 0 1rem white;
-      background-color: var(--secondary);
+      background-color: var(--white);
       color: var(--background)
     }
   }
@@ -65,7 +65,7 @@
     align-items: center;
     justify-content: center;
     opacity: 0.7;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50rem;
     font-size: 1.6rem;
     color: var(--primary)

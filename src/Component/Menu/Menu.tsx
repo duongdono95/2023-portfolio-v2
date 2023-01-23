@@ -2,10 +2,10 @@ import React, {useState} from 'react'
 import './Menu.scss'
 import { NavLink } from 'react-router-dom';
 import Tippy from '@tippyjs/react';
-const Menu = () => {
 
+const Menu = () => {
   return (
-    <div className='menu'>
+    <div id='menu' className='hide '>
       <div className="menu__items">
         <NavLink to='/'>
           <Tippy animation="fade" content="Home" placement="left"><i className="fa-solid fa-house"></i></Tippy>
@@ -19,13 +19,15 @@ const Menu = () => {
           <Tippy content="My Skills" placement="left"><i className="fa-solid fa-dice-d20"></i></Tippy>
         </NavLink>
 
+        <NavLink to='/Contact'>
+          <Tippy content="Contact Me" placement="left"><i className="fa-solid fa-phone"></i></Tippy>
+        </NavLink>
+
         <NavLink to='/Projects'>
           <Tippy content="My Projects" placement="left"><i className="fa-solid fa-code"></i></Tippy>
         </NavLink>
 
-        <NavLink to='/Contact'>
-          <Tippy content="Contact Me" placement="left"><i className="fa-solid fa-phone"></i></Tippy>
-        </NavLink>
+
       </div>
       <div className="break-line"></div>
       <div className="social__links">

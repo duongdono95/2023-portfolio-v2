@@ -13,7 +13,6 @@ export const routes = [
   { path: '/', component: Home },
   { path: '/About', component: About },
   { path: '/Skills', component: Skills },
-  { path: '/Projects/*', component: Projects },
   { path: '/Contact', component: Contact },
 ];
 
