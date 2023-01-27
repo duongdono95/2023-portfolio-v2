@@ -10,7 +10,7 @@
   height: 8.6rem;
   filter: drop-shadow(-1px -2px 0px #cfb8e5) drop-shadow(2px 2px 0px #9a4ee7) drop-shadow(-3px -2px 1px #3c3762)
     drop-shadow(2px 1px 3px #3c3762);
-  animation: thunder 3s infinite, floating 3s infinite, scale 3s linear infinite;
+  animation: thunder 3s infinite, floating 2s infinite;
   &:before,
   &:after {
     content: '';
@@ -37,7 +37,7 @@
   0%,
   25%,
   75% {
-    transform: scale(0.8);
+    transform: scale(0.6);
   }
   100% {
     filter: drop-shadow(0px -1px 0px #cfb8e5) drop-shadow(0px 0px 0px #9a4ee7)
@@ -54,21 +54,10 @@
 @keyframes floating {
   0%,
   100% {
-    transform: translatey(0);
+    transform: translateY(0);
   }
   50% {
-    transform: translatey(20rem);
+    transform: translateY(2rem);
   }
 }
 
-@keyframes scale {
-  0% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1.2);
-  }
-  0% {
-    transform: scale(0.8);
-  }
-}

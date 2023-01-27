@@ -1,9 +1,10 @@
 import React from 'react'
+import Bubble from "../../Animation/Bubble/Bubble"
 import './Skills.scss'
 
 const Skills = () => {
   return (
-    <div>Skills</div>
+    <div className='skill'><div className='bubble__container'><Bubble /></div></div>
   )
 }
 

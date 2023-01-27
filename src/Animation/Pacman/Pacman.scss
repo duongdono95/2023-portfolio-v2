@@ -1,0 +1,249 @@
+.pacman-container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--pacman-size);
+  --pacman-size : 7rem;
+  --pacman-color : #e9b60f;
+  position: relative;
+  display: flex;
+}
+.pacman {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: var(--pacman-size);
+  height: var(--pacman-size);
+  animation: PacmanRoaming 17s ease-in-out infinite;
+  animation-delay: 5s;
+  z-index: 11;
+  transform: rotate(90deg);
+}
+.ghost__container {
+  position: absolute;
+  animation: PacmanRoaming 17s ease-in-out infinite;
+  animation-delay: 4s;
+  z-index: 10;
+  .ghost {
+    position: relative;
+  }
+  .ghost__eyes{
+    position: absolute;
+    top: 1.5rem;
+    left: 0.1rem;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .ghost__eye {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: white;
+    border-radius: 5rem;
+    div {
+      position: absolute;
+      width: 0.8rem;
+      height: 0.8rem;
+      background-color: black;
+      border-radius: 2rem;
+      animation: eyes 1s linear infinite alternate-reverse;
+    }
+  }
+  .dots {
+    position: absolute;
+    top: 50%;
+    left: -105%;
+    transform: translate(-50%, -50%);
+    width: 7rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    .dot {
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: white;
+    }
+    .dot:nth-child(1) {
+      animation: blink 1s infinite alternate;
+    }
+    .dot:nth-child(2) {
+      animation: blink 1s infinite alternate;
+      animation-delay: 1s;
+    }
+    .dot:nth-child(3) {
+      animation: blink 1s infinite alternate;
+      animation-delay: s;
+    }
+  }
+}
+.pac-man::after {
+  position: absolute;
+  content: '';
+  width: 30rem;
+  height: var(--pacman-size);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  bottom: 0;
+  right: 60%;
+  z-index: -2;
+  animation: accelerator1 1s infinite;
+}
+
+.accelerators {
+  position: absolute;
+  z-index: -1;
+  right: 60%;
+  height: var(--pacman-size);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transform: scale(-1);
+  .accelerator {
+    background: linear-gradient(to right, rgba(255, 245, 183, 0.2), rgba(255, 255, 255, 0));;
+    width: 100%;
+    height: calc(var(--pacman-size)/6);
+    animation: accelerator2 2s infinite;
+    animation-delay: 0.5s;
+  }
+  .accelerator::before {
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background-color: #fed75a;
+    right: 60%;
+    z-index: 0;
+    animation: pacmanSnow 2s infinite, rotate 2s infinite;
+  }
+  .accelerator:nth-child(1), .accelerator:nth-child(1)::before {
+    top: 2.5rem;
+    animation-delay: 1s;
+  }
+  .accelerator:nth-child(2) , .accelerator:nth-child(2)::before{
+    animation-delay: 2s;
+    top: 5rem;
+  }
+  .accelerator:nth-child(3) , .accelerator:nth-child(3)::before {
+    animation-delay: 1.5s;
+    top: 0rem;
+  }
+}
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  min-width: 35rem;
+}
+.pacman-top {
+  width: var(--pacman-size);
+  height: calc(var(--pacman-size) / 2);
+  background-color: var(--pacman-color);
+  border-radius: 10rem 10rem 0 0;
+  box-shadow: 0 0 5rem #ffcd29a8;
+  animation: eating-top .2s infinite alternate;
+  transform-origin: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .eye {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 2rem;
+    margin-top: 10%;
+    margin-left: 40%;
+    background-color: #003A4F;
+  }
+}
+.pacman-bottom {
+  width: var(--pacman-size);
+  height: calc(var(--pacman-size) / 2);
+  border-radius: 0 0 10rem 10rem;
+  background-color: var(--pacman-color);
+  box-shadow: 0 0 5rem #ffcd29a8;
+  animation: eating-bottom .2s infinite alternate;
+  transform-origin: top;
+}
+
+
+@keyframes eating-top {
+  0% {
+    transform: rotate(-45deg)
+  }
+  100% {
+    transform: rotate(0deg)
+  }
+}
+@keyframes eating-bottom {
+  0% {
+    transform: rotate(45deg)
+  }
+  100% {
+    transform: rotate(0deg)
+  }
+}
+
+@keyframes PacmanRoaming {
+  0% {
+    top: 0%;
+    transform: rotate(90deg);
+  }
+  50% {
+    top: 100%;
+    transform: rotate(90deg);
+  }
+  51% {
+    top: 99%;
+    transform: rotate(270deg) scaleY(-1);
+  }
+  99% {
+    top: 2%;
+    transform: rotate(270deg) scaleY(-1);
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+@keyframes accelerator1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10rem;
+  }
+}
+@keyframes accelerator2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 15rem;
+  }
+}
+@keyframes pacmanSnow {
+  0% {
+    transform: translateX(-5rem);
+    opacity: 1;
+  }
+ 100% {
+    transform: translateX(5rem);
+    opacity: 0;
+  }
+}
+@keyframes eyes {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 50%
+  }
+}
+@keyframes blink {
+  0%{
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+}
