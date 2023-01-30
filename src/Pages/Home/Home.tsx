@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Tippy from '@tippyjs/react';
 import './Home.scss'
 import TypeWriter from "../../Hook/TypeWriter"
 import WeatherAnimation from "../../Animation/WeatherAnimation/WeatherAnimation"
@@ -31,7 +32,49 @@ const Home = () => {
                   <div><p>#Fullstack Developer</p></div>
                   <div><p>#Ui/Ux Designer</p></div>
             </div>
+            <div className="social__links">
+              <Tippy content="Linkedin" placement="bottom">
+                <a 
+                  className="social__link"
+                  href="https://www.linkedin.com/in/duong-dono-a644b8189/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                    <i className="fa-brands fa-linkedin-in"></i>
+                </a>
+              </Tippy>
+              <Tippy content="Facebook" placement="bottom">
+                <a
+                  className="social__link"
+                  href="https://www.facebook.com/thanhduong.bach.50115/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                    <i className="fa-brands fa-facebook"></i>
+                </a>
+              </Tippy>
+
+              <Tippy content="Instagram" placement="bottom">
+                <a className="social__link" href="https://www.instagram.com/duongdono225/" rel="noreferrer" target="_blank">
+                    <i className="fa-brands fa-instagram"></i>
+                </a>
+              </Tippy>
+
+              <Tippy content="Behance" placement="bottom">
+                <a className="social__link" href="https://www.behance.net/duongdono" rel="noreferrer" target="_blank">
+                    <i className="fa-brands fa-behance"></i>
+                </a>
+              </Tippy>
+
+            <Tippy content="Github" placement="bottom">
+                <a className="social__link" href="https://github.com/duongdono95" rel="noreferrer" target="_blank">
+                    <i className="fa-brands fa-github"></i>
+                </a>
+            </Tippy>
             </div>
+          </div>
+            
+
         </div>
       </div>
     </div>
