@@ -8,13 +8,39 @@ const Skills = () => {
     <div className='skills-experience'>
       <div className="skills-left">
         <h1>Timeline</h1>
-        <div className="timeline__container">
-          <div className="timeline">
-            <div className="line"></div>
-            <div className="milestone"></div>
+        <div className="timeline">
+            <div className="line">
+              <Tippy content="May 2022" placement="left" visible={true}>
+                <div className="milestone">
+                  <div className="dot"></div>
+                  <div className="dot2"></div>
+                  <p>Aotearoa Energy</p>
+                </div>
+              </Tippy>
+              <Tippy content="2022" placement="left" visible={true}>
+                <div className="milestone mil2">
+                  <div className="dot"></div>
+                  <div className="dot2"></div>
+                  <p>Yoobee</p>
+                </div>
+              </Tippy>
+              <Tippy content="2021" placement="left" visible={true}>
+                <div className="milestone mil3">
+                  <div className="dot "> </div>
+                  <div className="dot2"></div>
+                  <p>Yoobee</p>
+                </div>
+              </Tippy>
+              <Tippy content="2019" placement="left" visible={true}>
+                <div className="milestone mil4">
+                  <div className="dot "></div>
+                  <div className="dot2"></div>
+                  <p>Industrial Fine Art Uni VietNam</p>
+                </div>
+              </Tippy>
+            </div>
           </div>
         </div>
-      </div>
       <div className='skills-right'>
         <h1>Skills & Experience</h1>
         <div className="skills_content">

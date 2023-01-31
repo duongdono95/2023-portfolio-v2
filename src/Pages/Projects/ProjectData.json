@@ -1,0 +1,63 @@
+[
+    {
+        "title" : "Kognify",
+        "description" :  "NewZealand Travel Agent Website",
+        "imgUrl" : "web1",
+        "processDeck": "https://duongdono2205.files.wordpress.com/2022/10/1-merged.pdf",
+        "github": "https://github.com/duongdono95/kognifi.git",
+        "site": "https://kognify.netlify.app/",
+        "programmes": ["html", "css", "js"],
+        "type": "webDev",
+        "year": 2021
+    },
+    {
+        "title" : "MHK",
+        "description" :  "C2C Commercial Website ",
+        "imgUrl" : "web2",
+        "processDeck": "https://duongdono2205.files.wordpress.com/2022/10/documentation.pdf",
+        "github": "https://github.com/duongdono95/mhk.git",
+        "programmes": ["vuejs", "html", "css", "mongodb"],
+        "type": "webDev",
+        "year": 2022
+    },
+    {
+        "title" : "Tiktok",
+        "description" :  "Clone Entertainment platform Website",
+        "imgUrl" : "web3",
+        "programmes": ["react", "html", "css", "postman"],
+        "type": "webDev",
+        "year": 2022
+    },
+    {
+        "title" : "HiddenGems",
+        "description" :  "Travel Application",
+        "imgUrl" : "uiux1",
+        "processDeck": "https://www.behance.net/gallery/149574817/HiddenGems",
+        "type": "uiux",
+        "year": 2022
+    },
+    {
+        "title" : "Summoner Wars Univers",
+        "description" :  "Database Website for Mobile Game",
+        "imgUrl" : "uiux2",
+        "processDeck": "https://www.behance.net/gallery/149574817/HiddenGems",
+        "type": "uiux",
+        "year": 2022
+    },
+    {
+        "title" : "SHome",
+        "description" :  "Central Hub Application",
+        "imgUrl" : "uiux3",
+        "processDeck": "https://www.behance.net/gallery/134572707/Shome-Application",
+        "type": "uiux",
+        "year": 2021
+    },
+    {
+        "title" : "Civic",
+        "description" :  "Ticket Booking Application",
+        "imgUrl" : "uiux4",
+        "processDeck": "https://www.behance.net/gallery/142564905/Civic-Cinema-App",
+        "type": "uiux",
+        "year": 2021
+    }
+]
