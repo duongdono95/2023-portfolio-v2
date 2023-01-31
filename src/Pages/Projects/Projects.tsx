@@ -27,7 +27,6 @@ const Projects = () => {
       </div>
       <div className="projects-right">
         <div className="preview__container">
-          <img src={data[0].imgUrl} alt="" />
           <div className="preview">
             {displayedProject.imgUrl === "web1" && <img src={images.web1}  alt="" />}
             {displayedProject.imgUrl === "web2" && <img src={images.web2}  alt="" />}
@@ -37,7 +36,34 @@ const Projects = () => {
             {displayedProject.imgUrl === "uiux3" && <img src={images.uiux3}  alt="" />}
             {displayedProject.imgUrl === "uiux4" && <img src={images.uiux4}  alt="" />}
           </div>
-          <p>{displayedProject.description}</p>
+          <div>
+            {<ProgrammeIcons type={displayedProject.type}/>}  
+            <p>{displayedProject.description}</p>
+            <p>-</p>
+            <p>{displayedProject.year}</p>
+          </div>
+          {displayedProject.programmes && (
+            <div className='programmes'>{displayedProject.programmes.map((program, index) => {
+              return (
+                <React.Fragment key={index}><ProgrammeIcons type={program} /></React.Fragment>
+              )
+            })}</div>
+          )}
+          {displayedProject.role && (
+            <div className="roles">
+              <h3><i className="fa-solid fa-user"></i></h3>
+              {displayedProject.role.map((role, index) => {
+                return(
+                  <p key={index}>{role}</p>
+                )
+              })}
+            </div>
+          )}
+          <div className="project__buttons">
+            {displayedProject.processDeck && <div className="button pd"><p>Process Deck</p></div>}
+            {displayedProject.github && <div className="button git"><p>Github Repository</p></div>}
+            {displayedProject.site && <div className="button site"><p>Visit The Site</p></div>}
+          </div> 
         </div>
       </div> 
     </div>

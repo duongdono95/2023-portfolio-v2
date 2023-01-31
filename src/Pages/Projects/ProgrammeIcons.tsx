@@ -16,18 +16,20 @@ const ProgrammeIcons:React.FC<Props> = (props) => {
     const mongodb = <span>MongoDB</span>;
     const postman = <span>Postman</span>;
   return (
-    <div className="programme__icon">
-        {props.type === "html" && html}
-        {props.type === "css" && css}
-        {props.type === "vuejs" && vuejs}
-        {props.type === "js" && js}
-        {props.type === "react" && react}
-        {props.type === "typescript" && typescript}
-        {props.type === "mongodb" && mongodb}
-        {props.type === "postman" && postman}
-        {props.type === 'uiux' && "Ui/Ux"}
-        {props.type === 'webDev' && "Web Dev"}
-    </div>
+
+      <>
+          {props.type === "html" && <div className="programme__icon">HTML</div>}
+          {props.type === "css" && <div className="programme__icon">CSS</div>}
+          {props.type === "vuejs" && <div className="programme__icon">VUE</div>}
+          {props.type === "js" && <div className="programme__icon">JS</div>}
+          {props.type === "react" && <div className="programme__icon">REACT</div>}
+          {props.type === "typescript" && <div className="programme__icon">TS</div>}
+          {props.type === "mongodb" && <div className="programme__icon">MONGODB</div>}
+          {props.type === "postman" && <div className="programme__icon">POSTMAN</div>}
+          {props.type === 'uiux' && <div className="type__icon">Ui/Ux</div>}
+          {props.type === 'webDev' && <div className="type__icon">Web Dev</div>}
+      </>
+
   )
 }
 

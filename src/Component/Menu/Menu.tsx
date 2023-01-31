@@ -19,10 +19,6 @@ const Menu = () => {
           <Tippy content="My Skills" placement="left"><i className="fa-solid fa-dice-d20"></i></Tippy>
         </NavLink>
 
-        <NavLink to='/Contact'>
-          <Tippy content="Contact Me" placement="left"><i className="fa-solid fa-phone"></i></Tippy>
-        </NavLink>
-
         <NavLink to='/Projects'>
           <Tippy content="My Projects" placement="left"><i className="fa-solid fa-code"></i></Tippy>
         </NavLink>

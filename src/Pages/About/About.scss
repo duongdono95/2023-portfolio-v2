@@ -8,7 +8,7 @@
     }
     &-right {
         width: 60%;
-        padding: 5%;
+        padding: 5% 10% 5% 5%;
         p {
             text-align: justify;
             font-size: 1.8rem;
@@ -41,7 +41,8 @@
         width: 0%;
     }
     .about-right {
-        margin-top: 20%;
+        margin: 25% auto;
         width: 100%;
+        
     }
 }

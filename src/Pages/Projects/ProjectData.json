@@ -8,7 +8,8 @@
         "site": "https://kognify.netlify.app/",
         "programmes": ["html", "css", "js"],
         "type": "webDev",
-        "year": 2021
+        "year": 2021,
+        "role": ["Front-End Dev", "Visuals" , "Research", "Concept"]
     },
     {
         "title" : "MHK",
@@ -18,7 +19,8 @@
         "github": "https://github.com/duongdono95/mhk.git",
         "programmes": ["vuejs", "html", "css", "mongodb"],
         "type": "webDev",
-        "year": 2022
+        "year": 2022,
+        "role": ["Front-End Dev", "Back-End Dev", "Research", "Concept", "Team Lead"]
     },
     {
         "title" : "Tiktok",
@@ -26,7 +28,8 @@
         "imgUrl" : "web3",
         "programmes": ["react", "html", "css", "postman"],
         "type": "webDev",
-        "year": 2022
+        "year": 2022,
+        "role": ["Front-End Dev", "Back-End Dev", "Research", "Visual"]
     },
     {
         "title" : "HiddenGems",
@@ -34,15 +37,17 @@
         "imgUrl" : "uiux1",
         "processDeck": "https://www.behance.net/gallery/149574817/HiddenGems",
         "type": "uiux",
-        "year": 2022
+        "year": 2022,
+        "role": ["Ui/Ux Designer", "Team Lead", "Research", "Visuals"]
     },
     {
-        "title" : "Summoner Wars Univers",
+        "title" : "Summoner Wars Universe",
         "description" :  "Database Website for Mobile Game",
         "imgUrl" : "uiux2",
         "processDeck": "https://www.behance.net/gallery/149574817/HiddenGems",
         "type": "uiux",
-        "year": 2022
+        "year": 2022,
+        "role": ["Ui/Ux Designer", "Interactions", "Research", "Visual"]
     },
     {
         "title" : "SHome",
@@ -50,7 +55,8 @@
         "imgUrl" : "uiux3",
         "processDeck": "https://www.behance.net/gallery/134572707/Shome-Application",
         "type": "uiux",
-        "year": 2021
+        "year": 2021,
+        "role": ["Ui/Ux Designer", "Concept", "Interactions", "Visuals"]
     },
     {
         "title" : "Civic",
@@ -58,6 +64,7 @@
         "imgUrl" : "uiux4",
         "processDeck": "https://www.behance.net/gallery/142564905/Civic-Cinema-App",
         "type": "uiux",
-        "year": 2021
+        "year": 2021,
+        "role": ["Ui/Ux Designer", "Concept", "Research", "Visuals"]
     }
 ]
