@@ -11,16 +11,17 @@ import Bubble from "../Bubble/Bubble"
 const WeatherAnimation = () => {
   const weather = [
     {  name:'sun',
-      backgroundColor : 'rgba(251, 255, 0, 0.5)',
+      backgroundColor : 'rgba(0, 119, 255, 0.2)',
+      cloudColor : "rgba(253, 255, 168, 0.5)"
     },
     { name: 'rainbow',
-      backgroundColor : 'rgba(255, 90, 90, 0.6)',
+      backgroundColor : 'rgba(251, 255, 0, 0.5)',
     },
     { name: 'thunder' ,
       backgroundColor : 'rgba(26, 0, 99, 0.6)',
     },
     { name: 'snow',
-      backgroundColor : 'rgba(0, 119, 255, 0.2)',
+      backgroundColor : 'rgba(0, 60, 175, 0.6)',
     },
 ]
 const [weatherIndex, setWeatherIndex] = useState(0)
@@ -37,12 +38,12 @@ const changeWeather = () => {
 }
   return (
     <div style={{backgroundColor:`${currentWeather.backgroundColor}`}} className='weather__animation'>
-      <div onClick={changeWeather} className='animated-cloud'>
-          <div className='cloud large'><Cloud /></div>
+      <div className='animated-cloud'>
+          <div onClick={changeWeather} className='cloud large'><Cloud cloudColor={currentWeather.cloudColor} /></div>
           {currentWeather.name === 'sun' && <Sun />}
-          <div className='cloud med'><div><Cloud /></div></div>
+          <div onClick={changeWeather} className='cloud med'><div><Cloud cloudColor={currentWeather.cloudColor}/></div></div>
           {<div className='rainbow'>{currentWeather.name === 'rainbow' && <Rainbow />}</div>}
-          <div className='cloud small'><Cloud /></div>
+          <div onClick={changeWeather} className='cloud small'><Cloud cloudColor={currentWeather.cloudColor}/></div>
           <div className='thunder-container'>
             <div className='large'>{currentWeather.name === 'thunder' && <Thunder />}</div>
             <div className='med1'>{currentWeather.name === 'thunder' && <Thunder />}</div>
@@ -51,8 +52,33 @@ const changeWeather = () => {
             <div className='snow'>{currentWeather.name === 'snow' && <Snow />}</div>
           </div>
           <div className='bubble'><Bubble /></div>
-
+          <div className="weather__pills">
+          {
+          weather.map((item, index) => {
+            return (
+              <>
+                {item.name === 'sun' &&
+                (<div onClick={() => {setWeatherIndex(index)}} className={weatherIndex === index ? "weather__pill pill__active" :"weather__pill"}>
+                  <i className="fa-solid fa-sun"></i>
+                </div>)}
+                {item.name === 'rainbow' &&
+                (<div onClick={() => {setWeatherIndex(index)}} className={weatherIndex === index ? "weather__pill pill__active" :"weather__pill"}>
+                  <i className="fa-solid fa-rainbow"></i>
+                </div>)}
+                {item.name === 'thunder' &&
+                (<div onClick={() => {setWeatherIndex(index)}} className={weatherIndex === index ? "weather__pill pill__active" :"weather__pill"}>
+                  <i className="fa-solid fa-cloud-bolt"></i>
+                </div>)}
+                {item.name === 'snow' &&
+                (<div onClick={() => {setWeatherIndex(index)}} className={weatherIndex === index ? "weather__pill pill__active" :"weather__pill"}>
+                  <i className="fa-solid fa-snowflake"></i>
+                </div>)}
+              </>)
+            })
+          }
+          </div>
       </div>
+
     </div>
   )
 }

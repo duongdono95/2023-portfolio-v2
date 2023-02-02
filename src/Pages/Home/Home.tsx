@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Tippy from '@tippyjs/react';
 import './Home.scss'
 import TypeWriter from "../../Hook/TypeWriter"
 import WeatherAnimation from "../../Animation/WeatherAnimation/WeatherAnimation"
-import Pacman from "../../Animation/Pacman/Pacman"
-import Cloud from "../../Animation/Cloud/Cloud"
 const Home = () => {
   return (
     <div className="home">
@@ -12,7 +10,6 @@ const Home = () => {
       <div className='home__component'>
         <div className="home__component-left">
           <div className="home__component-divider">
-            <Pacman />
           </div>
         </div>
         <div className="home__component-right">
@@ -34,7 +31,7 @@ const Home = () => {
             </div>
             <div className="social__links">
               <Tippy content="Linkedin" placement="bottom">
-                <a 
+                <a
                   className="social__link"
                   href="https://www.linkedin.com/in/duong-dono-a644b8189/"
                   rel="noreferrer"
@@ -55,25 +52,35 @@ const Home = () => {
               </Tippy>
 
               <Tippy content="Instagram" placement="bottom">
-                <a className="social__link" href="https://www.instagram.com/duongdono225/" rel="noreferrer" target="_blank">
+                <a className="social__link"
+                href="https://www.instagram.com/duongdono225/"
+                rel="noreferrer"
+                target="_blank"
+                >
                     <i className="fa-brands fa-instagram"></i>
                 </a>
               </Tippy>
 
               <Tippy content="Behance" placement="bottom">
-                <a className="social__link" href="https://www.behance.net/duongdono" rel="noreferrer" target="_blank">
+                <a className="social__link"
+                href="https://www.behance.net/duongdono"
+                rel="noreferrer"
+                target="_blank">
                     <i className="fa-brands fa-behance"></i>
                 </a>
               </Tippy>
 
             <Tippy content="Github" placement="bottom">
-                <a className="social__link" href="https://github.com/duongdono95" rel="noreferrer" target="_blank">
+                <a className="social__link"
+                href="https://github.com/duongdono95"
+                rel="noreferrer"
+                target="_blank">
                     <i className="fa-brands fa-github"></i>
                 </a>
             </Tippy>
             </div>
           </div>
-            
+
 
         </div>
       </div>

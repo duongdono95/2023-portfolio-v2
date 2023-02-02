@@ -37,7 +37,7 @@ const Projects = () => {
             {displayedProject.imgUrl === "uiux4" && <img src={images.uiux4}  alt="" />}
           </div>
           <div>
-            {<ProgrammeIcons type={displayedProject.type}/>}  
+            {<ProgrammeIcons type={displayedProject.type}/>}
             <p>{displayedProject.description}</p>
             <p>-</p>
             <p>{displayedProject.year}</p>
@@ -60,12 +60,12 @@ const Projects = () => {
             </div>
           )}
           <div className="project__buttons">
-            {displayedProject.processDeck && <div className="button pd"><p>Process Deck</p></div>}
-            {displayedProject.github && <div className="button git"><p>Github Repository</p></div>}
-            {displayedProject.site && <div className="button site"><p>Visit The Site</p></div>}
-          </div> 
+            {displayedProject.processDeck && <div className="button pd"><p><a rel="noreferrer" target="_blank" href={displayedProject.processDeck}>Process Deck</a></p></div>}
+            {displayedProject.github && <div className="button git"><p><a rel="noreferrer" target="_blank" href={displayedProject.github}>Github Repository</a></p></div>}
+            {displayedProject.site && <div className="button site"><p><a rel="noreferrer" target="_blank" href={displayedProject.site}>Visit The Site</a></p></div>}
+          </div>
         </div>
-      </div> 
+      </div>
     </div>
   )
 }

@@ -23,7 +23,7 @@
         border-radius: 1rem;
         padding: 2%;
         box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
-        
+
         div {
             display: flex;
             align-items: center;
@@ -31,7 +31,7 @@
         }
         h1 {
             font-size: 3rem;
-            
+
         }
         p {
             color: rgba(255, 255, 255, 0.7);
@@ -44,7 +44,7 @@
         cursor: pointer;
     }
 }
-.projects-right { 
+.projects-right {
     width: 70%;
 }
 .project-active {
@@ -128,7 +128,7 @@
         align-items: center;
         justify-content: center;
         color: white;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.1);
         border-radius: 1rem;
         cursor: pointer;
         box-shadow: inset -3px -1.5px 0.5rem rgb(255, 255, 255), inset 1px 1px 0.5rem rgba(0, 0, 0, 0.2);
@@ -164,7 +164,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        
+
         .title__box {
             width: 45%;
             min-width: 28rem;

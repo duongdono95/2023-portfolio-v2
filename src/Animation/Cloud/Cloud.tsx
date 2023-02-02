@@ -1,11 +1,16 @@
 import React from 'react';
 import './Cloud.scss';
-const Cloud = () => {
+
+interface Props {
+  cloudColor?: string
+}
+
+const Cloud:React.FC<Props> = ({cloudColor}) => {
 
   return (
     <div className="weather">
       <div className="icon">
-        <div className="icon__cloud">
+        <div style={cloudColor ? {backgound:`${cloudColor}`} : {}} className="icon__cloud">
           <div className="icon__cloud-reflect icon__cloud-reflect--1"></div>
           <div className="icon__cloud-reflect icon__cloud-reflect--2"></div>
           <div className="icon__cloud-highlight"></div>
